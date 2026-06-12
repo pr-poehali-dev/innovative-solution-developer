@@ -5,9 +5,9 @@ export function Footer() {
         <div className="grid md:grid-cols-12 gap-12">
           {/* Logo & Tagline */}
           <div className="md:col-span-4">
-            <p className="font-serif text-2xl tracking-wide text-foreground mb-4">Wabi</p>
+            <p className="font-serif text-2xl tracking-wide text-foreground mb-4">Дыши и Властвуй</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Японский минимализм в сочетании со скандинавским теплом.
+              Студия йоги и пилатеса. Мягко, осознанно, в вашем ритме.
             </p>
           </div>
 
@@ -22,7 +22,7 @@ export function Footer() {
                 Услуги
               </a>
               <a href="#process" className="text-sm text-foreground hover:text-sage transition-colors">
-                Процесс
+                Занятия
               </a>
               <a href="#contact" className="text-sm text-foreground hover:text-sage transition-colors">
                 Контакты
@@ -63,7 +63,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Wabi Studio. Все права защищены.
+            &copy; {new Date().getFullYear()} Дыши и Властвуй. Все права защищены.
           </p>
           <p className="text-xs text-muted-foreground">Создано с намерением</p>
         </div>

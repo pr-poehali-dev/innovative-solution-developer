@@ -39,8 +39,8 @@ export function Testimonial() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Работа с Wabi была похожа на медитацию. Они поняли, что наш дом должен поддерживать
-          благополучие семьи, а не просто красиво выглядеть. Результат — пространство, которое наконец ощущается как наше.
+          Я пришла с болью в спине и полным отсутствием гибкости. Через два месяца забыла о боли,
+          а ещё через два — впервые в жизни почувствовала, что живу в своём теле, а не против него.
         </blockquote>
 
         {/* Attribution */}
@@ -49,8 +49,8 @@ export function Testimonial() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-sm tracking-widest uppercase text-primary-foreground/80">Анна и Михаил Петровы</p>
-          <p className="text-sm text-primary-foreground/60 mt-1">Резиденция в Москве</p>
+          <p className="text-sm tracking-widests uppercase text-primary-foreground/80">Марина С.</p>
+          <p className="text-sm text-primary-foreground/60 mt-1">Ученица студии, 8 месяцев практики</p>
         </div>
       </div>
     </section>
