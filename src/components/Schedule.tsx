@@ -91,35 +91,34 @@ export function Schedule() {
           {schedule[activeDay].map((cls, i) => (
             <div
               key={i}
-              className="group bg-background hover:bg-card transition-colors duration-300 p-6 lg:p-8 flex items-center justify-between gap-6"
+              className="group bg-background hover:bg-card transition-colors duration-300 p-6 lg:p-8"
             >
-              <div className="flex items-center gap-6 min-w-0">
-                <p className="font-serif text-2xl text-stone/60 group-hover:text-sage transition-colors duration-300 w-16 shrink-0">
+              {/* Top row: time + title + badge */}
+              <div className="flex items-start gap-4 mb-4">
+                <p className="font-serif text-xl text-stone/60 group-hover:text-sage transition-colors duration-300 w-14 shrink-0 pt-0.5">
                   {cls.time}
                 </p>
-                <div>
-                  <p className="font-serif text-xl text-foreground mb-1">{cls.title}</p>
+                <div className="min-w-0">
+                  <p className="font-serif text-xl text-foreground mb-1.5 leading-tight">{cls.title}</p>
                   <span className={`text-xs tracking-widest uppercase px-2 py-0.5 ${levelColor[cls.level] ?? "text-muted-foreground bg-muted"}`}>
                     {cls.level}
                   </span>
                 </div>
               </div>
-              <div className="flex items-center gap-4 shrink-0">
-                <div className="text-right">
-                  <p className={`text-sm font-medium ${cls.spots <= 2 ? "text-terracotta" : "text-sage"}`}>
-                    {cls.spots === 0 ? "Мест нет" : `${cls.spots} места`}
-                  </p>
-                  <p className="text-xs text-muted-foreground">осталось</p>
-                </div>
+              {/* Bottom row: spots + button */}
+              <div className="flex items-center justify-between pl-18 gap-4" style={{ paddingLeft: "3.5rem" }}>
+                <p className={`text-sm ${cls.spots <= 2 ? "text-terracotta" : "text-sage"}`}>
+                  {cls.spots === 0 ? "Мест нет" : `${cls.spots} места свободно`}
+                </p>
                 <a
                   href="#booking"
-                  className={`inline-flex items-center gap-2 px-5 py-2.5 text-xs tracking-widest uppercase transition-all duration-300 ${
+                  className={`inline-flex items-center gap-2 px-5 py-2 text-xs tracking-widest uppercase transition-all duration-300 shrink-0 ${
                     cls.spots === 0
                       ? "text-muted-foreground border border-border cursor-not-allowed"
                       : "bg-sage text-primary-foreground hover:bg-sage/90"
                   }`}
                 >
-                  <Icon name="Calendar" size={14} />
+                  <Icon name="Calendar" size={13} />
                   Записаться
                 </a>
               </div>
